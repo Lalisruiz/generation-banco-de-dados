@@ -4,7 +4,7 @@ Repositório com os scripts SQL desenvolvidos durante o exercício prático de b
 
 ## 📁 Arquivos incluídos
 
-- `exe01.sql` – Criação de banco de dados e tabela `tb_colaboradores`, inserção, seleção, atualização e remoção de dados.
+- `Rh_Exerc01.sql` – Criação de banco de dados e tabela `tb_colaboradores`, inserção, seleção, atualização e remoção de dados.
 
 ## 🛠️ Como executar
 

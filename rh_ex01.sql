@@ -30,10 +30,6 @@ SELECT * FROM tb_colaboradores WHERE salario > 2000;
 SELECT * FROM tb_colaboradores WHERE salario < 2000;
 
 -- Atualização de um registro (ex: alteração de salário de Funcionários)
-UPDATE tb_colaboradores
-SET salario = 2100.00
-WHERE id = 2; 
-
 SELECT * FROM tb_colaboradores;
 
 UPDATE tb_colaboradores
@@ -61,6 +57,7 @@ VALUES
 
 SELECT * FROM tb_colaboradores;
 
+-- Demissão e Admissão de colaboradores
 DELETE FROM tb_colaboradores
 WHERE id = 5;
 

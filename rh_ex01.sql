@@ -1,11 +1,11 @@
--- Criação do banco de dados
+-- 1. Criação do banco de dados
 DROP DATABASE IF EXISTS db_rh_empresa;
 CREATE DATABASE db_rh_empresa;
 
 -- Selecionando o banco de dados
 USE db_rh_empresa;
 
--- Criação da tabela colaboradores
+-- 2. Criação da tabela colaboradores
 CREATE TABLE tb_colaboradores (
     id BIGINT AUTO_INCREMENT PRIMARY KEY,
     nome VARCHAR(100) NOT NULL,
@@ -15,7 +15,7 @@ CREATE TABLE tb_colaboradores (
     data_admissao DATE
 );
 
--- Inserção de no mínimo 5 colaboradores
+-- 3. Inserção de no mínimo 5 colaboradores
 INSERT INTO tb_colaboradores (nome, cargo, departamento, salario, data_admissao) VALUES
 ("Ana Silva", "Analista de RH", "Recursos Humanos", 3200.00, "2021-03-15"),
 ("João Santos", "Assistente Administrativo", "Administrativo", 1800.00, "2022-07-01"),
@@ -23,13 +23,13 @@ INSERT INTO tb_colaboradores (nome, cargo, departamento, salario, data_admissao)
 ("Marina Oliveira", "Estagiária", "Financeiro", 1300.00, "2023-02-10"),
 ("Fernanda Costa", "Gerente de Projetos", "TI", 5500.00, "2019-05-05");
 
--- SELECT com salário maior que 2000
+-- 4. SELECT com salário maior que 2000
 SELECT * FROM tb_colaboradores WHERE salario > 2000;
 
--- SELECT com salário menor que 2000
+-- 5. SELECT com salário menor que 2000
 SELECT * FROM tb_colaboradores WHERE salario < 2000;
 
--- Atualização de um registro (ex: alteração de salário de Funcionários)
+-- 6. Atualização de um registro (ex: alteração de salário de Funcionários)
 SELECT * FROM tb_colaboradores;
 
 UPDATE tb_colaboradores
@@ -40,7 +40,7 @@ UPDATE tb_colaboradores
 SET salario = 2600.00
 WHERE id = 2; 
 
--- Atualização de um registro (ex: alteração de cargo de Funcionários)
+-- Extra: Atualização de um registro (ex: alteração de cargo de Funcionários)
 UPDATE tb_colaboradores
 SET cargo = "Analista de RH Júnior"
 WHERE id = 1; 
@@ -49,7 +49,7 @@ UPDATE tb_colaboradores
 SET cargo = "Desenvolvedor Front End Júnior"
 WHERE id = 3; 
 
--- Inserção de mais 2 colaboradores
+-- Extra: Inserção de mais 2 colaboradores
 INSERT INTO tb_colaboradores (nome, cargo, departamento, salario, data_admissao)
 VALUES
 ("Mauri Geoya", "Desenvolvedor Full Stack Pleno", "TI", 6000.00, "2024-01-10"),
@@ -57,12 +57,16 @@ VALUES
 
 SELECT * FROM tb_colaboradores;
 
--- Demissão e Admissão de colaboradores
+-- Extra: Demissão de colaboradores
 DELETE FROM tb_colaboradores
 WHERE id = 5;
 
+-- Extra: Admissão de colaboradores
 INSERT INTO tb_colaboradores (nome, cargo, departamento, salario, data_admissao)
 VALUES ("Larissa Ruiz", "Gerente de Projetos", "TI", 10000.00, "2025-07-23");
+
+-- Visualização completa de tabela de colaboradores
+SELECT * FROM tb_colaboradores;
 
 
 

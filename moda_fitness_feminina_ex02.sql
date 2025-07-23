@@ -12,7 +12,6 @@ CREATE TABLE IF NOT EXISTS tb_produtos (
     estoque INT NOT NULL DEFAULT 0 COMMENT 'Quantidade em estoque'
 );
 
-
 SELECT * FROM tb_produtos;
 
 -- 3. Inserção de 8 registros na tabela de produtos

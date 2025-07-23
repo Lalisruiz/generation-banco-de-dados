@@ -35,5 +35,5 @@ UPDATE tb_estudantes SET nota = 7.1 WHERE id = 2;
 -- Verificação da atualização
 SELECT * FROM tb_estudantes WHERE id = 2;
 
--- Extra: Visualização completa da tabela após operações
-SELECT * FROM tb_estudantes ORDER BY turma, nome;
+-- Visualização completa da tabela ordenada por ID (chamada)
+SELECT * FROM tb_estudantes ORDER BY id;

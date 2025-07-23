@@ -61,6 +61,7 @@ VALUES
 
 SELECT * FROM tb_colaboradores;
 
+-- Demissão e Admissão de colaboradores
 DELETE FROM tb_colaboradores
 WHERE id = 5;
 
